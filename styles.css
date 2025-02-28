@@ -21,7 +21,7 @@
   background-repeat: repeat;
   background-size: 750px;
   /* Adjust the intensity */
-  opacity: 0.1;
+  opacity: 0.2;
   /* Fill the background space */
   position: absolute;
   bottom: 0;
@@ -32,6 +32,7 @@
   z-index: -1;
   /* Fix the reflection to the screen */
   background-attachment: fixed;
+  background-blend-mode: multiply;
 }
 
 /* Styling by Harry Hocker */
@@ -97,7 +98,7 @@ p {
 
 
 .sidebar {
-  background-color: rgba(51, 51, 51, 0.4);
+  background-color: rgba(200, 200, 200, 0.1);
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -128,7 +129,7 @@ p {
 .sidebar ul li a {
   display: block;
   padding: 1rem;
-  color: #fff;
+  color: #000000;
   text-decoration: none;
   font-size: xx-large;
 }
@@ -180,7 +181,7 @@ p {
 }
 .gridItem {
   max-width: 20vw;
-  background-color: rgba(51, 51, 51, 0.07);
+  background-color: rgba(200, 200, 200, 0.1);
   border-radius: 1rem;
   margin: 1rem;
   opacity: 65%;
@@ -277,4 +278,43 @@ p {
     filter: none;
   }
 
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: rgb(0, 0, 0, 0.75) url("images/clouds2.jpg");
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+
+  h1 {
+    color: #dddddd;
+  }
+
+  h2 {
+    color: #dddddd;
+  }
+
+  p {
+    color: #dddddd;
+  }
+
+  .gridItem {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .sidebar {
+  background-color: rgba(0, 0, 0, 0.4);
+    
+  }
+  .sidebar ul li a {
+    color: #dddddd;
+  }
+
+  .glass::before {
+    opacity: 0.1;
+  }
 }
