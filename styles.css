@@ -110,8 +110,9 @@
   
   .sidebar ul li {
     margin: 2rem;
-    padding: 1rem;
     border-radius: 5rem;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
   }
 
   .sidebar ul li:hover {
@@ -122,6 +123,8 @@
   }
   
   .sidebar ul li a {
+    display:block;
+    padding: 1rem;
     color: #fff;
     text-decoration: none;
     font-size: 32px;
