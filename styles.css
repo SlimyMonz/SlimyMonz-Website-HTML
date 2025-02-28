@@ -1,161 +1,167 @@
-
-/* Glass CSS class provided by: https://www.tyleo.com/html-glass.html */
+/* Glass CSS class provided by: https://www.tyleo.com/html-glass.html ; Modified by Harry.*/
 .glass {
   /* Blur effect */
-  backdrop-filter: blur(2rem);
+  backdrop-filter: blur(0.5rem);
   -webkit-backdrop-filter: blur(0.5rem);
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  
+  /* MUST be a single line or else it won't work. */
+  box-shadow: inset 0px -0.5px 1px rgba(255, 255, 255, 0.1), inset 0px +0.5px 1px rgba(255, 255, 255, 0.025), inset 0px 0px 10px 5px rgba(255, 255, 255, 0.025), inset 0px 0px 40px 5px rgba(255, 255, 255, 0.025), 0px 4px 6px rgba(0, 0, 0, 0.25);
+
   position: relative;
   border-radius: 5px;
-    /* Hide the corners of the header */
+  /* Hide the corners of the header */
   overflow: hidden;
 }
 
-.glass::before {  /* Make the element render */  content: "";
-  /* Apply the background image */  background-image: url(images/lightrefraction.png);  background-repeat: repeat;  background-size: 750px;
-  /* Adjust the intensity */  opacity: 0.1;
-  /* Fill the background space */  position: absolute;  bottom: 0;  left: 0;  right: 0;  top: 0;
-  /* Render behind other children */  z-index: -1;
-  /* Fix the reflection to the screen */  background-attachment: fixed;}
+.glass::before {
+  /* Make the element render */
+  content: "";
+  /* Apply the background image */
+  background-image: url(images/lightrefraction.png);
+  background-repeat: repeat;
+  background-size: 750px;
+  /* Adjust the intensity */
+  opacity: 0.1;
+  /* Fill the background space */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  /* Render behind other children */
+  z-index: -1;
+  /* Fix the reflection to the screen */
+  background-attachment: fixed;
+}
+
+/* Styling by Harry Hocker */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: row;
+  background-image: url("images/clouds2.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+section {
+  margin-bottom: 2vw;
+  border-radius: 1rem;
+  border-style: solid;
+  border-width: 0.25rem;
+  border-color: rgba(230, 230, 230, 0.1);
+  padding: 2rem;
+}
 
 
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Basic styles */
-  body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: row;
-    background-image: url('images/clouds2.jpg');
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-  }
-  
-  /* Section styling */
-  section {
-    margin-bottom: 2vw;
-    border-radius: 1rem;
-    border-style: solid;
-    border-width: 0.25rem;
-    border-color: rgba(230, 230, 230, 0.10);
-    padding: 2rem;
+h1 {
+  font-size: xx-large;
+  margin: 0;
+  padding: 1.5rem;
+}
 
-  }
-  
-  /* Headings */
-  h1 {
-    font-size: xx-large;
-    margin: 0;
-    padding: 1.5rem;
-  }
-  
-  h2 {
-    font-size: x-large;
-    margin: 0;
-    padding: 1.5rem;
-    text-align: center;
-  }
-  
-  /* Paragraph */
-  p {
-    margin: 0;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    padding-bottom: 1.5rem;
-    font-size: large;
-    text-align: justify;
+h2 {
+  font-size: x-large;
+  margin: 0;
+  padding: 1.5rem;
+  text-align: center;
+}
 
-  }
-  
-  /* Flexbox layout for columns */
-  .column {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .left {
-    width: 15%;
-    min-width: fit-content;
-  }
-  
-  .right {
-    width: 85%;
-  }
-  
-  /* Sidebar styles */
-  .sidebar {
-    background-color: rgba(51, 51, 51, 0.4);
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; 
-    align-items: center;
-    padding: 1rem;
-    position: sticky;
-    top: 0;
-    height: 100vh;
-  }
-  
-  /* Sidebar list styling */
-  .sidebar ul {
-    list-style-type: none;
-    width: 100%;
-    text-align: center;
-  }
-  
-  .sidebar ul li {
-    margin: 2rem;
-    border-radius: 5rem;
-    transition-duration: 0.5s;
-    transition-timing-function: ease-out;
-  }
+p {
+  margin: 0;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-size: large;
+  text-align: justify;
+}
 
-  .sidebar ul li:hover {
-    transform: scale(1.1, 1.1);
-    transition-duration: 0.5s;
-    transition-timing-function: ease;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
-  }
-  
-  .sidebar ul li a {
-    display:block;
-    padding: 1rem;
-    color: #fff;
-    text-decoration: none;
-    font-size: 32px;
-    transition: color 0.3s ease;
-  }
-  
 
-  /* Content area */
-  .content {
-    flex-grow: 1;
-    padding: 2rem;
-    border-radius: 1rem;
-  }
-  
-  /* Grid item styles */
+.column {
+  display: flex;
+  flex-direction: column;
+}
 
-  .grid {
-    display: grid;
-    grid-template-columns: auto auto auto;
-  }
+.left {
+  width: 15%;
+  min-width: fit-content;
+}
 
-  .gridItem {
-    max-width: 20vw;
-    background-color: rgba(51, 51, 51, 0.07);
-    border-radius: 1rem;
-    margin: 1rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .gridItem img {
-    max-width: 100%;
-  }
-  
-  
+.right {
+  width: 85%;
+}
+
+
+.sidebar {
+  background-color: rgba(51, 51, 51, 0.4);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  width: 100%;
+  text-align: center;
+}
+
+.sidebar ul li {
+  margin: 2rem;
+  border-radius: 5rem;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+
+.sidebar ul li:hover {
+  transform: scale(1.1, 1.1);
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+.sidebar ul li a {
+  display: block;
+  padding: 1rem;
+  color: #fff;
+  text-decoration: none;
+  font-size: 32px;
+  transition: color 0.3s ease;
+}
+
+
+.content {
+  flex-grow: 1;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.gridItem {
+  max-width: 20vw;
+  background-color: rgba(51, 51, 51, 0.07);
+  border-radius: 1rem;
+  margin: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gridItem img {
+  max-width: 100%;
+}
