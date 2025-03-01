@@ -225,7 +225,7 @@ p {
   body {
     flex-direction: column; 
     background-image: url("images/clouds2.jpg");
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-position: center;
     background-size: cover;
   }
