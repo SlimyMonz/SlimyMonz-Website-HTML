@@ -54,7 +54,6 @@ body {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  width: 100vw;
 }
 
 section {
@@ -176,10 +175,13 @@ p {
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: auto auto auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
 }
 .gridItem {
+  min-width: 300px;
   max-width: 20vw;
   background-color: rgba(200, 200, 200, 0.1);
   border-radius: 1rem;
@@ -213,12 +215,19 @@ p {
 #homeText {
   padding-top: 1.5rem;
   border-radius: 2.5rem;
+  background-color: rgba(200, 200, 200, 0.1);
+  width: fit-content;
+ 
 }
 
 /* Mobile and smaller screen styles */
 @media (max-width: 900px) {
   body {
     flex-direction: column; 
+    background-image: url("images/clouds2.jpg");
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
   }
 
   .left {
@@ -316,5 +325,9 @@ p {
 
   .glass::before {
     opacity: 0.1;
+  }
+
+  #homeText {
+    background-color: rgba(0, 0, 0, 0.4);
   }
 }
