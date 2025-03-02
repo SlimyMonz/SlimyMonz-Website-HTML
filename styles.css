@@ -189,7 +189,8 @@ p {
   opacity: 65%;
   transition-duration: 0.5s;
   transition-timing-function: ease;
-  .gridImage {
+  img {
+    max-width: 100%;
     filter: blur(2.5px);
     transition-duration: 0.5s;
     transition-timing-function: ease;
@@ -201,14 +202,11 @@ p {
   transition-timing-function: ease;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   opacity: 100%;
-  .gridImage {
+  img { 
     filter: none;
     transition-duration: 0.5s;
     transition-timing-function: ease;
   }
-}
-.gridItem img {
-  max-width: 100%;
 }
 
 
