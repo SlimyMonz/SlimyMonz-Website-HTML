@@ -142,6 +142,7 @@ p {
 }
 
 .fullImage {
+  max-width: 100%;
   border-radius: 2.5rem;
   max-height: 85vh;
   opacity: 65%;
@@ -257,6 +258,7 @@ p {
 
   img {
     width: 100%;
+    filter: none;
   }
   .grid {
     grid-template-columns: 1fr; 
@@ -266,6 +268,10 @@ p {
     width: 100%;
     max-width: 100%; 
     margin: 0rem 0rem 1.5rem 0rem;
+    opacity: 100%;
+    img {
+      filter: none;
+    }
   }
 
   .contact {
@@ -279,6 +285,7 @@ p {
   }
 
   .icon {
+    opacity: 100%;
     width: 100%;
     min-width: 48px;
     max-width: 128px;
@@ -291,6 +298,7 @@ p {
   .fullImage {
     border-radius: 1rem;
     filter: none;
+    opacity: 100%;
   }
 
 }
@@ -322,7 +330,7 @@ p {
   }
 
   .sidebar {
-  background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     
   }
   .sidebar ul li a {
