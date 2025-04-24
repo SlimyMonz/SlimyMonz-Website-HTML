@@ -50,7 +50,7 @@ body {
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: row;
-  background-image: url("images/clouds2.jpg");
+  background-image: url("images/IMG_0318.jpeg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -231,7 +231,7 @@ p {
 @media (max-width: 900px) {
   body {
     flex-direction: column; 
-    background-image: url("images/clouds2.jpg");
+    background-image: url("images/IMG_0318.jpeg");
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -306,7 +306,7 @@ p {
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
   body {
-    background: rgb(0, 0, 0, 0.75) url("images/clouds2.jpg");
+    background: rgb(0, 0, 0, 0.75) url("images/IMG_0318.jpeg");
     background-blend-mode: overlay;
     background-attachment: fixed;
     background-position: center;
