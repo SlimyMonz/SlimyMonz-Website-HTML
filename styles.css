@@ -227,6 +227,36 @@ p {
  
 }
 
+
+.music-player {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  margin: 2rem auto;
+  border-radius: 1rem;
+  max-width: 500px;
+  backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.5rem);
+  box-shadow: inset 0px -0.5px 1px rgba(255, 255, 255, 0.1), 
+              inset 0px 0.5px 1px rgba(255, 255, 255, 0.025),
+              0px 4px 10px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.music-player audio {
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+}
+
+.music-player .song-title {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 0.05rem;
+}
+
+
 /* Mobile and smaller screen styles */
 @media (max-width: 900px) {
   body {
@@ -342,6 +372,10 @@ p {
   }
 
   #homeText {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .music-player {
     background-color: rgba(0, 0, 0, 0.4);
   }
 }
