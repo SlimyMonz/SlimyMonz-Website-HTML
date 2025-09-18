@@ -50,7 +50,7 @@ body {
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: row;
-  background-image: url("images/IMG_0318.jpeg");
+  background-image: url("images/monz_skin.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -262,7 +262,7 @@ p {
 @media (max-width: 900px) {
   body {
     flex-direction: column; 
-    background-image: url("images/IMG_0318.jpeg");
+    background-image: url("images/monz_skin.jpg");
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -337,7 +337,7 @@ p {
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
   body {
-    background: rgb(0, 0, 0, 0.75) url("images/IMG_0318.jpeg");
+    background: rgb(0, 0, 0, 0.75) url("images/monz_skin.jpg");
     background-blend-mode: overlay;
     background-attachment: fixed;
     background-position: center;
